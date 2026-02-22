@@ -4,9 +4,6 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sandra Alele - Portfolio</title>
-  <meta name="description" content="Professional portfolio of Sandra Alele, an Administrative and Operations Support Specialist. Expert in project coordination, customer success, and executive assistance."/>
-  <meta name="keywords" content="Sandra Alele, Sandra Erhovwosere Alele, Virtual Assistant, Administrative Support, Operations Specialist, Project Coordinator, ALX Graduate"/>
-  <meta name="author" content="Sandra Alele"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -143,9 +140,8 @@
     footer { background: #141210; padding: 1.75rem 4rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: rgba(255,255,255,0.3); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.75s ease, transform 0.75s ease; }
-    .js-ready .reveal { opacity: 0; transform: translateY(22px); }
-    .js-ready .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* TESTIMONIALS */
     .testimonials-section { background: var(--cream); padding: 7rem 4rem; }
@@ -412,7 +408,7 @@
   <h2 class="contact-heading reveal">Ready to work<br/><em>together?</em></h2>
   <p class="contact-sub reveal">Open to virtual assistant roles, customer service positions, and project coordination opportunities. Remote-friendly and available now.</p>
   <div class="contact-links reveal">
-    <a href="/cdn-cgi/l/email-protection#f0919c959c9583919e948291de9e97b0979d91999cde939f9d" class="contact-link primary">Email Me</a>
+    <a href="mailto:alelesandra.ng@gmail.com" class="contact-link primary">Email Me</a>
     <a href="https://linkedin.com/in/sandraaleleofficial" target="_blank" class="contact-link">LinkedIn</a>
   </div>
 </section>
@@ -422,8 +418,7 @@
   <span>Administrative &amp; Operations Support Specialist</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.documentElement.classList.add('js-ready');
+<script>
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -435,4 +430,9 @@
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
   function switchTab(idx) {
-    document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('act
+    document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+    document.querySelectorAll('.sample-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
+  }
+</script>
+</body>
+</html>
